@@ -21,7 +21,7 @@ async function saveInSheets() {
   const client = await auth.getClient() //Obtiene el cliente autenticado,ya puede hacer peticiones a Google Sheets
   const sheetRange = "Hoja 1!A2:F";
   const readRange = "Hoja 1!E2:E"; // Solo lee la columna E (URLs)
-  const writeRange = "Hoja 1!A2:F"; // Donde se escriben los nuevos empleos
+  const writeRange = "Hoja 1!A2:F"; // Donde s  e escriben los nuevos empleos
 
   // 1. Leer empleos desde el archivo JSON:
   const rawData = fs.readFileSync("jobs.json", "utf-8");
@@ -62,8 +62,6 @@ async function saveInSheets() {
     console.log("No hay nuevos empleos para insertar")
     return;
   };
-
- 
 
   // 7. Insertar en la hoja:
   await sheets.spreadsheets.values.append({

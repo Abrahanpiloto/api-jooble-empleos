@@ -1,11 +1,11 @@
 import "./App.css";
 
-import { TableWithTitleAndDescription } from "./components/DataTable";
+import { JobsTable } from "./components/DataTable.jsx";
 function App() {
   return (
     <>
       Hi Dev! Abrahan
-      <TableWithTitleAndDescription />
+      <JobsTable />
     </>
   );
 }
