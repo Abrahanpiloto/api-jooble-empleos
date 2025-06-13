@@ -14,7 +14,7 @@ const auth = new google.auth.GoogleAuth({
 const sheets = google.sheets({ version: 'v4', auth });
 
 // ID de la hoja de cálculo desde .env
-const spreadsheetId = process.env.SPREADSHEETS_ID;
+const spreadsheetId = process.env.GOOGLE_SHEETS_ID;
 
 // Función para escribir o guardar datos de la hoja de calculo:
 async function saveInSheets() {
