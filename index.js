@@ -8,7 +8,7 @@ const key = process.env.JOOBLE_API_KEY;
 const JOOBLE_URL = url + key;
 
 const params = {
-  keywords: "chofer",
+  keywords: "frontend",
   location: "madrid",
 }
 

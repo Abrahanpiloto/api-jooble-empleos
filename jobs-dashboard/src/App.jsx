@@ -1,11 +1,11 @@
 import "./App.css";
+import  JobTable  from "./components/JobTable.jsx";
 
-import { JobsTable } from "./components/DataTable.jsx";
 function App() {
   return (
     <>
       Hi Dev! Abrahan
-      <JobsTable />
+      <JobTable />
     </>
   );
 }
