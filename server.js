@@ -3,9 +3,7 @@ import cors from 'cors';
 import { google } from 'googleapis';
 import dotenv from 'dotenv';
 
-
 dotenv.config();
-
 const app = express();
 app.use(cors());
 
