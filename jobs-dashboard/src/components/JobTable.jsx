@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-  Card,
-  CardBody,
-  Typography,
-} from "@material-tailwind/react";
+import { Card, CardBody, Typography } from "@material-tailwind/react";
 
 export default function JobTable() {
   const [jobs, setJobs] = useState([]);
@@ -16,44 +12,48 @@ export default function JobTable() {
   }, []);
 
   return (
-    <Card className="mt-6 mx-4 overflow-auto">
+    <Card className="mt-6 mx-4 overflow-hidden bg-[#DDE1E7]">
       <CardBody>
-        <Typography variant="h5" className="mb-4">
+        <Typography variant="h5" className="mb-4 text-black">
           Empleos disponibles
         </Typography>
-        <table className="table-auto w-full text-left">
-          <thead>
-            <tr>
-              <th className="px-4 py-2">Título</th>
-              <th className="px-4 py-2">Empresa</th>
-              <th className="px-4 py-2">Ubicación</th>
-              <th className="px-4 py-2">Actualizado</th>
-              <th className="px-4 py-2">Link</th>
-              <th className="px-4 py-2">Fecha guardado</th>
-            </tr>
-          </thead>
-          <tbody>
-            {jobs.map((job, index) => (
-              <tr key={index}>
-                <td className="border px-4 py-2">{job[0]}</td>
-                <td className="border px-4 py-2">{job[1]}</td>
-                <td className="border px-4 py-2">{job[2]}</td>
-                <td className="border px-4 py-2">{job[3]}</td>
-                <td className="border px-4 py-2">
-                  <a
-                    href={job[4]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 underline"
-                  >
-                    Ver empleo
-                  </a>
-                </td>
-                <td className="border px-4 py-2">{job[5]}</td>
+        <div className="max-h-[70vh] overflow-y-auto">
+          <table className="table-auto w-full text-left ">
+            <thead>
+              <tr className="border-b sticky top-0 bg-[#DDE1E7] z-10">
+                <th className="border-b px-4 py-2 text-black">Título</th>
+                <th className="border-b px-4 py-2 text-black">Empresa</th>
+                <th className="border-b px-4 py-2 text-black">Ubicación</th>
+                <th className="border-b px-4 py-2 text-black">Actualizado</th>
+                <th className="border-b px-4 py-2 text-black">Link</th>
+                <th className="border-b px-4 py-2 text-black">
+                  Fecha guardado
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {jobs.map((job, index) => (
+                <tr key={index} className="border-b border-gray-500">
+                  <td className="px-4 py-2 text-black">{job[0]}</td>
+                  <td className="px-4 py-2 text-black">{job[1]}</td>
+                  <td className="px-4 py-2 text-black">{job[2]}</td>
+                  <td className="px-4 py-2 text-black">{job[3]}</td>
+                  <td className="px-4 py-2 text-black">
+                    <a
+                      href={job[4]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600"
+                    >
+                      Ver
+                    </a>
+                  </td>
+                  <td className="px-4 py-2 text-black">{job[5]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </CardBody>
     </Card>
   );

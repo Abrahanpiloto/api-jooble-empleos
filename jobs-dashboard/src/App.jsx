@@ -1,11 +1,15 @@
 import "./App.css";
-import  JobTable  from "./components/JobTable.jsx";
+import Inputs from "./components/Inputs.jsx";
+import JobTable from "./components/JobTable.jsx";
 
 function App() {
   return (
     <>
       Hi Dev! Abrahan
-      <JobTable />
+      <div className="flex">
+        <Inputs />
+        <JobTable />
+      </div>
     </>
   );
 }
